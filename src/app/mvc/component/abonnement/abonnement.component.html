@@ -1,0 +1,49 @@
+                    <!-- DataTales Example -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <div class="row">
+                                <div class="col-md-9">
+                                 <h6 class="m-0 font-weight-bold text-primary">Liste des Abonnements</h6>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="admin/abonnements/add" class="btn btn-success">Nouvel Abonnement</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-stripped" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Nom</th>
+                                            <th>description</th>
+                                            <th>Prix</th>
+                                            <th>date de Debut</th>
+                                            <th>date de Fin</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Nom</th>
+                                            <th>description</th>
+                                            <th>Prix</th>
+                                            <th>date de Debut</th>
+                                            <th>date de Fin</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody *ngFor="let patient of data ">
+                                        <tr>
+                                            <td>{{ patient.id }}</td>
+                                            <td>{{ patient.nom }}</td>
+                                            <td>{{ patient.description }}</td>
+                                            <td>{{ patient.prix }}</td>
+                                            <td>{{ patient.date_debut }}</td>
+                                            <td>{{ patient.date_fin }}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
